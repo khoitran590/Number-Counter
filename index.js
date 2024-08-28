@@ -2,6 +2,7 @@ const decreaseBtn = document.getElementById("btn-decrease");
 const increaseBtn = document.getElementById("btn-increase");
 const resetBtn = document.getElementById("btn-reset");
 const countLabel = document.getElementById("countLabel");
+const randomize = document.getElementById("Randomize")
 
 let count = 0;
 
@@ -15,5 +16,9 @@ decreaseBtn.onclick = function(){
 }
 resetBtn.onclick = function(){
     count = 0;
+    countLabel.textContent = count;
+}
+randomize.onclick = function(){
+    count = Math.floor(Math.random() * 100);
     countLabel.textContent = count;
 }
